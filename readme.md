@@ -42,6 +42,9 @@ This project was developed at the [RocketSeat GoStack Bootcamp][gostack] with th
 - [NodeJS][nodejs]
 - [Express][express]
 - [Typescript][typescript]
+- [Docker][docker]
+- [PostgreSQL][postgres]
+- [TypeORM][typeorm]
 - [Eslint][eslint]
 - [Prettier][prettier]
 - [Editor Config][editor-config]
@@ -193,3 +196,6 @@ Made with 💗 by Marcelo Farias 👋 [Get in touch!](https://www.linkedin.com/i
 [typescript]: https://www.typescriptlang.org/
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/
+[typeorm]: https://typeorm.io/
+[docker]: https://www.docker.com/
+[postgresql]: https://www.postgresql.org/
