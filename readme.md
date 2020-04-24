@@ -43,7 +43,7 @@ This project was developed at the [RocketSeat GoStack Bootcamp][gostack] with th
 - [Express][express]
 - [Typescript][typescript]
 - [Docker][docker]
-- [PostgreSQL][postgres]
+- [PostgreSQL][postgresql]
 - [TypeORM][typeorm]
 - [Eslint][eslint]
 - [Prettier][prettier]
@@ -71,14 +71,19 @@ $ yarn dev:server
 
 ## :link: Routes
 <p align="center">
+  Appointments<br>
   <a href="#list-the-appointments">List</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#create-a-appointment">Create</a>
+  <br><br>
+  Users<br>
+  <a href="#create-a-user">Create</a>
 </p>
 
 <h1 align="center">
 <a href="https://insomnia.rest/run/?label=NodejsConcepts&uri=https://raw.githubusercontent.com/marcelojrfarias/gobarber-api/master/insomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 </h1>
 
+## Appointmens
 ### List the appointments
 #### Request
 - **Method:**
@@ -173,6 +178,65 @@ $ yarn dev:server
   ```json
   {
     "error": "This appointment is already booked!"
+  }
+  ```
+
+## Users
+### Create a user
+#### Request
+- **Method:**
+  ```
+  POST
+  ```
+- **Endpoint:**
+  ```
+  /users
+  ```
+- **Route Parameters:**
+  ```
+  None.
+  ```
+- **Query Parameter:**
+  ```
+  None.
+  ```
+- **Headers:**
+  ```
+  None.
+  ```
+- **Body:**
+  ```json
+  {
+    "name": "Marcelo Farias",
+    "email": "marcelo@farias.com",
+    "password": "Abc#12345"
+  }
+  ```
+#### Response
+##### Success
+- **Code:**
+  ```
+  200
+  ```
+- **Content:**
+  ```json
+  {
+    "name": "Marcelo Farias",
+    "email": "marcelo@farias.com",
+    "id": "d68b062c-11d9-4746-aff0-4bf9fa8580b6",
+    "created_at": "2020-04-24T18:28:39.576Z",
+    "updated_at": "2020-04-24T18:28:39.576Z"
+  }
+  ```
+##### Error
+- **Code:**
+  ```
+  400
+  ```
+- **Content:**
+  ```json
+  {
+    "error": "Email addres already used."
   }
   ```
 
