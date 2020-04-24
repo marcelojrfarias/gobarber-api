@@ -104,7 +104,7 @@ $ yarn dev:server
   ```
 - **Headers:**
   ```
-  None.
+  Authorization: Bearer <token>
   ```
 - **Body:**
   ```
@@ -146,7 +146,7 @@ $ yarn dev:server
   ```
 - **Headers:**
   ```
-  None.
+  Authorization: Bearer <token>
   ```
 - **Body:**
   ```json
