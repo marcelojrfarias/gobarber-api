@@ -181,6 +181,28 @@ $ yarn dev:server
     "error": "This appointment is already booked!"
   }
   ```
+OR
+- **Code:**
+  ```
+  401
+  ```
+- **Content:**
+  ```json
+  {
+    "error": "JWT token is missing."
+  }
+  ```
+OR
+- **Code:**
+  ```
+  401
+  ```
+- **Content:**
+  ```json
+  {
+    "error": "Invalid JWT token."
+  }
+  ```
 
 ## Users
 ### Create a user
@@ -240,6 +262,7 @@ $ yarn dev:server
     "error": "Email addres already used."
   }
   ```
+
 ### Update user avatar
 #### Request
 - **Method:**
@@ -292,6 +315,28 @@ $ yarn dev:server
   ```json
   {
     "error": "Only authenticated users can change avatar."
+  }
+  ```
+OR
+- **Code:**
+  ```
+  401
+  ```
+- **Content:**
+  ```json
+  {
+    "error": "JWT token is missing."
+  }
+  ```
+OR
+- **Code:**
+  ```
+  401
+  ```
+- **Content:**
+  ```json
+  {
+    "error": "Invalid JWT token."
   }
   ```
 
