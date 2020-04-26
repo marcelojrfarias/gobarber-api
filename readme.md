@@ -76,7 +76,8 @@ $ yarn dev:server
   <a href="#create-a-appointment">Create</a>
   <br><br>
   Users<br>
-  <a href="#create-a-user">Create</a>
+  <a href="#create-a-user">Create</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#update-user-avatar">Update Avatar</a>
 </p>
 
 <h1 align="center">
@@ -209,7 +210,7 @@ $ yarn dev:server
   {
     "name": "Marcelo Farias",
     "email": "marcelo@farias.com",
-    "password": "Abc#12345"
+    "password": "123456"
   }
   ```
 #### Response
@@ -237,6 +238,60 @@ $ yarn dev:server
   ```json
   {
     "error": "Email addres already used."
+  }
+  ```
+### Update user avatar
+#### Request
+- **Method:**
+  ```
+  POST
+  ```
+- **Endpoint:**
+  ```
+  /users/avatar
+  ```
+- **Route Parameters:**
+  ```
+  None.
+  ```
+- **Query Parameter:**
+  ```
+  None.
+  ```
+- **Headers:**
+  ```
+  Authorization: Bearer <token>
+  ```
+- **Body:**
+  ```json
+  avatar: <file>
+  ```
+#### Response
+##### Success
+- **Code:**
+  ```
+  200
+  ```
+- **Content:**
+  ```json
+  {
+    "id": "d68b062c-11d9-4746-aff0-4bf9fa8580b6",
+    "name": "Marcelo Farias",
+    "email": "marcelo@farias.com",
+    "avatar": "c9d419ccb1673ead8eca-file_name.png",
+    "created_at": "2020-04-24T18:28:39.576Z",
+    "updated_at": "2020-04-26T21:26:56.998Z"
+  }
+  ```
+##### Error
+- **Code:**
+  ```
+  400
+  ```
+- **Content:**
+  ```json
+  {
+    "error": "Only authenticated users can change avatar."
   }
   ```
 
